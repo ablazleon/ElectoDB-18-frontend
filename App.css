@@ -1,0 +1,97 @@
+.Aplicacion{
+  background-color: #48f2cd;
+ }
+
+
+ .Titulo{
+   color: #46514f;
+   font-family: 'Raleway',sans-serif;
+   font-size:50 px;
+   font-weight: 800;
+   line-height: 72px;
+   margin: 0 0 24px;
+   text-align: center;
+   text-transform: uppercase;
+ }
+.Titulo2{
+  color: #46514f;
+  font-family: 'Raleway',sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+  margin: 0 0 24px;
+  text-align: center;
+
+}
+.Content{
+  height: 400px;
+  margin: 50px 20px 20px 20px ;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.ContentTerminado{
+  background-color: #25c6a9;
+}
+
+.Botones{
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: helvetica;
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+    color: #46514f;
+    background-color: #25c6a9;
+    border-radius: 15px;
+    border: 3px double #187a68;
+
+  }
+.Botones:disabled:hover{
+    background-color: #1b8975;
+    color: #394240;
+    opacity: 1;
+
+  }
+.Botones:disabled {
+      background-color: #1b8975;
+      color: #394240;
+      opacity: 1;
+
+    }
+.Botones:hover{
+    opacity: 0.5;
+    text-decoration: none;
+  }
+.Fotografia{
+width: 50%;
+height: 500px;
+}
+.Entrada{
+ border: 3px double #187a68;
+ border-radius: 15px ;
+ width: 100%;
+ font-size: 30px;
+ line-height: 35px;
+ height: 70px;
+ text-align: center;
+ background-color:  #25c6a9;
+ color: #46514f;
+ margin-right: auto;
+ margin-left:  auto;
+}
+.ActionBar{
+  display: flex;
+  margin-top: 70px;
+  padding-bottom:  100px;
+  justify-content: space-around;
+  background-color: #48f2cd;
+}
+.Lateral{
+display: flex;
+flex-direction: column;
+}
