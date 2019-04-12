@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import { DUAL, CAMBIA_LEY, CAMBIA_ANO, CAMBIA_REGION } from './actions';
-
+import { resultados1, resultados2 } from "../assets/mock-data"
 
 function dual(state = false, action = {}) {
     switch(action.type) {
         case DUAL:
 	    return action.payload;
-	default: 
+	default:
 	    return false;
     }
 }
@@ -42,13 +42,22 @@ function currentRegion(state = 0, action = {}) {
 
 
 function resultados(state = [], action = {}) {
-            return state;
+  switch(action.type) {
+      case CAMBIA_LEY:
+          if (action.payload===0)
+            return [...resultados1];
+          if (action.payload===1)
+            return [...resultados2];
+          break;
+      default:
+          return state;
+  }
 }
 
 const GlobalState = combineReducers({
     dual,
     currentLey,
-    currentAno, 
+    currentAno,
     currentRegion,
     resultados
 });

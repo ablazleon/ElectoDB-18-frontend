@@ -1,5 +1,5 @@
 .Aplicacion{
-  background-color: #48f2cd;
+  background-color: white;
  }
 
 
@@ -89,7 +89,7 @@ height: 500px;
   margin-top: 70px;
   padding-bottom:  100px;
   justify-content: space-around;
-  background-color: #48f2cd;
+  background-color:white;
 }
 .Lateral{
 display: flex;

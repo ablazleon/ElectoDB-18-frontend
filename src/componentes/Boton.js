@@ -10,15 +10,15 @@ export default class Boton extends React.Component {
     SelectorBoton(bN) {
         switch(bN){
             case "2019":
-                return this.props.onChangeAno(3);
+                return this.props.onChangeAno(0);
             case "2016":
-               return this.props.onChangeAno(2);
-            case "2015":
                return this.props.onChangeAno(1);
+            case "2015":
+               return this.props.onChangeAno(2);
             case "2011":
-               return this.props.onChangeAno(0);
+               return this.props.onChangeAno(3);
             default:
-              return this.props.onChangeAno(3);
+              return this.props.onChangeAno(4);
         }
     }
 

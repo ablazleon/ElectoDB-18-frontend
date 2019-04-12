@@ -21,23 +21,25 @@ const pieOptions = {
 
 export default class Hemiciclo extends React.Component {
 
-	
+
     render(){
         return(
+
 	<Chart
           chartType="PieChart"
           data={[ ['Pac Man', 'Percentage'],
-          ['PP', 55],
-          ['PSOE', 25],
-          ['CIUDADANOS', 10],
-          ['UNIDAS PODEMOS', 5],
-          ['VOX', 5],
+          ['PP', this.props.resultado["PP"][1]],
+          ['PSOE', this.props.resultado["PSOE"][1]],
+          ['CIUDADANOS', this.props.resultado["CiU"][1]],
+          ['UNIDAS PODEMOS', this.props.resultado["Podemos"][1]],
+          ['VOX', 0],
 
-          ['', 100]]}
+          ['', (this.props.resultado["PP"][1]+this.props.resultado["PSOE"][1]+this.props.resultado["CiU"][1]+this.props.resultado["Podemos"][1])]
+        ]}
           options={pieOptions}
           graph_id="PieChart"
           width={"100%"}
-          height={"400px"}
+          height={"600px"}
           legend_toggle
         />
         );

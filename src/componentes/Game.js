@@ -8,9 +8,9 @@ export default class Game extends React.Component {
     render(){
         return(
             <div>
-              <Content resultado={this.props.resultado}/>
-              <ActionBar onChangeAno={this.props.onChangeAno}/>
-
+            <h1>ElectoDB</h1>
+            <ActionBar onChangeAno={this.props.onChangeAno} onChangeLey={this.props.onChangeLey}/>
+            <Content resultado={this.props.resultado}/>
             </div>
 
         );

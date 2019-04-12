@@ -8,14 +8,18 @@ import {dual, cambiaLey, cambiaAno, cambiaRegion} from './redux/actions.js';
 class App extends Component {
 
   render() {
-
+     //console.log(this.props.resultados[0][0]);
+     //console.log(this.props.currentAno)
+     //console.log(this.props.currentRegion)
       return (
       <div className = "Aplicacion">
-        <Game resultado={this.props.resultados[this.props.currentAno[this.prop]]}
+        <Game resultado={this.props.resultados[this.props.currentAno][this.props.currentRegion]}
               resultados={this.props.resultados}
               indexRegion={this.props.currentRegion}
               indexAno={this.props.currentAno}
+              onChangeLey={ (id)=> {this.props.dispatch(cambiaLey(id))}}
               onChangeAno={ (buttonName) => {this.props.dispatch(cambiaAno(buttonName))}}/>
+              
 
       </div>
       );
