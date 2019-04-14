@@ -12,14 +12,9 @@ function dual(state = false, action = {}) {
 }
 
 function currentLey(state = 0, action = {}) {
-    switch(action.type) {
-        case CAMBIA_LEY:
-            return action.payload;
-            break;
-        default:
             return state;
     }
-}
+
  function currentAno(state = 0, action = {}) {
     switch(action.type) {
         case CAMBIA_ANO:
@@ -44,10 +39,12 @@ function currentRegion(state = 0, action = {}) {
 function resultados(state = [], action = {}) {
   switch(action.type) {
       case CAMBIA_LEY:
-          if (action.payload===0)
-            return [...resultados1];
-          if (action.payload===1)
-            return [...resultados2];
+          console.log(action.payload)
+          
+          if (action.payload==="0")
+            return resultados1 ;
+          if (action.payload==="1")
+            return resultados2;
           break;
       default:
           return state;
