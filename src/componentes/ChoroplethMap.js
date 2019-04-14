@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 import Chart from "react-google-charts";
 
+constructor(props){
+    super(props);
+    this.Maximo = this.Maximo.bind(this);
+}
+
+Maximo() {
+    switch(resultados){
+      resultados.forEach((element, i)=>{
+        if elem
+      })
+    }
+}
 
 const data = [
   ["Country", "Popularity"],
@@ -19,7 +31,7 @@ class ChoroplethMap extends Component {
     render() {
       var data = [
         ["Provinces", "Latitude"],
-        [{v: 'ES-MD', f: 'Madrid'}, 1],
+        [{v: 'ES-MD', f: 'Madrid'}, this.Maximo(this.props.resultadosAno[0])],
         [{v: 'ES-CT', f: 'Cataluña'}, 2],
 
 
