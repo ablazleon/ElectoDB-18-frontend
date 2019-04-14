@@ -17,7 +17,7 @@ export default class Barras extends React.Component {
 
 	<Chart
           chartType="BarChart"
-          data={[ ["Element", "Density", { role: "style" } ],
+          data={[ ["Element", "Num de Votos", { role: "style" } ],
           ['PP', this.props.resultado["PP"][0], "blue"],
           ['PSOE', this.props.resultado["PSOE"][0], "red"],
           ['CIUDADANOS', this.props.resultado["CiU"][0], "orange"],
