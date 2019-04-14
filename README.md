@@ -1,10 +1,4 @@
-G801
-	Gabriel Toro Retivoff
-	Julián Castro Turga
-
-Mejoras Realizadas
-	-Personalización de estilos.
-	-Boton de reset (Nuevas preguntas y reinicio del juego).
+# ElectoDB, an easy tool for visual election analysis
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
