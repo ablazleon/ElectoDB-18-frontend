@@ -16,7 +16,8 @@ export default class ReduxProvider extends React.Component {
 		currentLey: 0, //la 0 es la ley d'hondt
 		currentAno: 0, //año 5 corresponde con 2019, 4=2016, 3=2011, etc
 		currentRegion: 0, //la 0 es españa, el resto de provincias tendrán su código
-		resultados: [...resultados1]
+		resultados: [...resultados1],
+    
         };
         this.store = this.configureStore();
     }

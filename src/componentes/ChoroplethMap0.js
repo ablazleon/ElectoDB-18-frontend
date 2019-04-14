@@ -4,11 +4,29 @@ import * as d3 from 'd3';
 import espJson from './Esp.topo.json';
 
 class ChoroplethMap extends Component {
-    componentDidMount() {
+  constructor(props){
+    super(props);
+    this.dataset = {};
+    this.colorize = (valuePP,valuePSOE,valuePodemos) => {
+        let max = Math.max(valuePP,valuePSOE,valuePodemos);
+       if(valuePP === max)
+            return "#02c9ec";
+
+        if(valuePSOE === max)
+            return "#ec0209";
+
+        if(valuePodemos === max)
+            return "#8f04d5";
+
+    }
+}
+
+
+
         // Datamaps expect data in format:
         // { "USA": { "fillColor": "#42a844", numberOfWhatever: 75},
         //   "FRA": { "fillColor": "#8dc386", numberOfWhatever: 43 } }
-        let dataset = {};
+
 
      /*   let voteArray = ["votesPP","votesPSOE","votesPodemos"];
         espJson.objects.spain.geometries.properties.forEach(function(elem){
@@ -19,18 +37,7 @@ class ChoroplethMap extends Component {
 
         //Colorize function for each province depending in votes numbers
 
-         let colorize = (valuePP,valuePSOE,valuePodemos) => {
-             let max = Math.max(valuePP,valuePSOE,valuePodemos);
-            if(valuePP === max)
-                 return "#02c9ec";
 
-             if(valuePSOE === max)
-                 return "#ec0209";
-
-             if(valuePodemos === max)
-                 return "#8f04d5";
-
-         }
 
         // fill dataset in appropriate format
         this.props.resultadosAno.forEach(function (item) { //
@@ -39,8 +46,8 @@ class ChoroplethMap extends Component {
                 PP = item["PP"][0],
                 PSOE = item["PSOE"][0],
                 Podemos = item["Podemos"][0];
-            dataset[iso] = { votosPP: PP,votosPSOE: PSOE,votosPodemos: Podemos,
-                fillColor: colorize(PP,PSOE,Podemos) };
+            this.dataset[iso] = { votosPP: PP,votosPSOE: PSOE,votosPodemos: Podemos,
+                fillColor: this.colorize(PP,PSOE,Podemos) };
         });
 
         let map = new Datamap({
@@ -72,7 +79,7 @@ class ChoroplethMap extends Component {
                 UNKNOWN: 'rgb(0,0,0)',
                 defaultFill: '#eee'
             },
-            data: dataset,
+            data: this.dataset,
             setProjection: function (element) {
                 var projection = d3.geoMercator()
                     .center([3.70325, 40.4167]) // always in [East Latitude, North Longitude]
@@ -83,7 +90,7 @@ class ChoroplethMap extends Component {
                 return { path: path, projection: projection };
             }
         });
-    }
+
 
     render() {
 

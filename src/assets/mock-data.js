@@ -8,7 +8,7 @@ escaños=(PP, PSOE, Ciu, Podemos, Otros)
 export const resultados1 =[
 	[//2016
 		{
-		"id": 0, //Madrid
+		"id": "Madrid", //Madrid
 		"PP":[1315847, 15],
 		"PSOE":[674825, 7],
 		"Podemos":[729870, 8],
@@ -16,7 +16,7 @@ export const resultados1 =[
 		"color":"blue"
 		},
 		{
-		"id": 1, //Murcia
+		"id": "Murcia", //Murcia
 		"PP":[332437, 5],
 		"PSOE":[144322, 2],
 		"Podemos":[102355, 2],
@@ -24,7 +24,7 @@ export const resultados1 =[
 		"color":"blue"
 		},
 		{
-		"id": 2, //Asturias
+		"id": "Asturias", //Asturias
 		"PP":[207811, 3],
 		"PSOE":[146336, 2],
 		"Podemos":[140058, 2],

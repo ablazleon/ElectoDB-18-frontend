@@ -14,12 +14,13 @@ class App extends Component {
       return (
       <div className = "Aplicacion">
         <Game resultado={this.props.resultados[this.props.currentAno][this.props.currentRegion]}
+              resultadosAno={this.props.resultados[this.props.currentAno]}
               resultados={this.props.resultados}
               indexRegion={this.props.currentRegion}
               indexAno={this.props.currentAno}
               onChangeLey={ (id)=> {this.props.dispatch(cambiaLey(id))}}
               onChangeAno={ (buttonName) => {this.props.dispatch(cambiaAno(buttonName))}}/>
-              
+
 
       </div>
       );
