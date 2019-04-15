@@ -5,32 +5,36 @@ id_ano (5=2019, 4=2016, 3=2015, 2=2011, 1=2007, 0=2003)
 votos= (PP, PSOE, Ciu, Podemos, Otros)
 escaños=(PP, PSOE, Ciu, Podemos, Otros)
 */
+
 export const resultados1 =[
 	[//2016
 		{
-		"id": 0, //Madrid
+		"id": "Madrid", //Madrid
 		"PP":[1315847, 15],
 		"PSOE":[674825, 7],
 		"Podemos":[729870, 8],
 		"CiU":[610391, 6],
-		"color":"blue"
+		"color":1
 		},
 		{
-		"id": 1, //Murcia
+		"id": "Murcia", //Murcia
 		"PP":[332437, 5],
 		"PSOE":[144322, 2],
 		"Podemos":[102355, 2],
 		"CiU":[111574, 1],
-		"color":"blue"
+		"color":1
 		},
 		{
-		"id": 2, //Asturias
+		"id": "Asturias", //Asturias
 		"PP":[207811, 3],
 		"PSOE":[146336, 2],
 		"Podemos":[140058, 2],
 		"CiU":[74370, 1],
-		"color":"blue"
-		}
+		"color":1
+		},
+		{
+			"resto": [1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 2, 4]
+		   }
 	],
 	[ //2015
 		{
@@ -39,7 +43,7 @@ export const resultados1 =[
 		"PSOE":[643158, 6],
 		"Podemos":[750477, 8],
 		"CiU":[676389, 7],
-		"color":"blue"
+		"color":1
 		},
 		{
 			"id": 1, //Murcia
@@ -47,7 +51,7 @@ export const resultados1 =[
 			"PSOE":[147524,2],
 			"Podemos":[110089, 1],
 			"CiU":[128294, 2],
-		"color":"blue"
+		"color":1
 		},
 		{
 			"id": 2, //Asturias
@@ -55,8 +59,11 @@ export const resultados1 =[
 			"PSOE":[144017, 2],
 			"Podemos":[132007, 2],
 			"CiU":[83885, 1],
-		"color":"blue"
-		}
+		"color":1
+		},
+		{
+			"resto": [1, 1, 1, 1, 1, 2, 1, 1, 3, 3, 3, 3, 1, 4]
+		   }
 	],
 	[ //2011
 		{
@@ -65,7 +72,7 @@ export const resultados1 =[
 		"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"blue"
+		"color":1
 		},
 		{
 			"id": 1,
@@ -73,7 +80,7 @@ export const resultados1 =[
 			"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"red"
+		"color":3
 		},
 		{
 			"id": 2,
@@ -81,8 +88,11 @@ export const resultados1 =[
 			"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"blue"
-		}
+		"color":1
+		},
+		{
+			"resto": [1, 1, 1, 1, 1, 3, 3, 1, 3, 3, 3, 3, 1, 4]
+		   }
 	],
 	[ // 2008
 		{
@@ -91,7 +101,7 @@ export const resultados1 =[
 		"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"blue"
+		"color":1
 		},
 		{
 			"id": 0,
@@ -99,7 +109,7 @@ export const resultados1 =[
 			"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"red"
+		"color":3
 		},
 		{
 			"id": 0,
@@ -107,8 +117,11 @@ export const resultados1 =[
 			"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"blue"
-		}
+		"color":3
+		},
+		{
+			"resto": [3, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 1, 4]
+		   }
 	]
 ];
 export const resultados2 =[
@@ -119,7 +132,7 @@ export const resultados2 =[
 		"PSOE":[674000, 7],
 		"Podemos":[700000, 8],
 		"CiU":[600000, 6],
-		"color":"blue"
+		"color":1
 		},
 		{
 		"id": 1,
@@ -127,7 +140,7 @@ export const resultados2 =[
 		"PSOE":[350000, 4],
 		"Podemos":[200000, 3],
 		"CiU":[130000, 1],
-		"color":"red"
+		"color":3
 		},
 		{
 		"id": 2,
@@ -135,8 +148,11 @@ export const resultados2 =[
 		"PSOE":[70000, 1],
 		"Podemos":[50000, 1],
 		"CiU":[50000, 1],
-		"color":"blue"
-		}
+		"color":1
+		},
+		{
+			"resto": [1, 1, 3, 1, 1, 3, 1, 1, 1, 3, 3, 1, 1, 4]
+		   }
 	],
 	[
 		{
@@ -145,7 +161,7 @@ export const resultados2 =[
 		"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"blue"
+		"color":1
 		},
 		{
 			"id": 0,
@@ -153,7 +169,7 @@ export const resultados2 =[
 			"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"red"
+		"color":3
 		},
 		{
 			"id": 0,
@@ -161,8 +177,11 @@ export const resultados2 =[
 			"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"blue"
-		}
+		"color":1
+		},
+		{
+			"resto": [1, 1, 2, 1, 4, 3, 1, 2, 3, 1, 1, 3, 1, 4]
+		   }
 	],
 	[
 		{
@@ -171,7 +190,7 @@ export const resultados2 =[
 		"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"blue"
+		"color":1
 		},
 		{
 			"id": 0,
@@ -179,7 +198,7 @@ export const resultados2 =[
 			"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"red"
+		"color":3
 		},
 		{
 			"id": 0,
@@ -187,8 +206,11 @@ export const resultados2 =[
 			"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"blue"
-		}
+		"color":1
+		},
+		{
+			"resto": [1, 1, 3, 4, 1, 2, 3, 4, 3, 1, 2, 3, 1, 4]
+		   }
 	],
 	[
 		{
@@ -197,7 +219,7 @@ export const resultados2 =[
 		"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"blue"
+		"color":1
 		},
 		{
 			"id": 0,
@@ -205,7 +227,7 @@ export const resultados2 =[
 			"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"red"
+		"color":3
 		},
 		{
 			"id": 0,
@@ -213,7 +235,10 @@ export const resultados2 =[
 			"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"blue"
-		}
+		"color":1
+		},
+		{
+			"resto": [1, 1, 1, 1, 1, 3, 3, 3, 3, 1, 1, 3, 1, 4]
+		   }
 	]
 ];
