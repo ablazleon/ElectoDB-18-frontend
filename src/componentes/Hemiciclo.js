@@ -20,9 +20,10 @@ const pieOptions = {
 	};
 
 export default class Hemiciclo extends React.Component {
-
+resultado;
 
     render(){
+
         return(
 
 	<Chart

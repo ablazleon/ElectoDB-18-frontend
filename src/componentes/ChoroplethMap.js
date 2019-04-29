@@ -1,42 +1,117 @@
-import React, { Component } from 'react';
-import Chart from "react-google-charts";
+import React from 'react';
+import Datamap from 'datamaps/dist/datamaps.world.min.js';
+import * as d3 from 'd3';
+import espJson from './Esp.topo.json';
+class ChoroplethMap extends React.Component {
 
-constructor(props){
-    super(props);
-    this.Maximo = this.Maximo.bind(this);
-}
-
-Maximo() {
-    switch(resultados){
-      resultados.forEach((element, i)=>{
-        if elem
-      })
+    componentDidMount() {
+        this.drawMap();
     }
-}
+
+
+    componentDidUpdate() {
+        this.drawMap();
+    }
 
 
 
-class ChoroplethMap extends Component {
+    componentWillUnmount() {
+        this.clear();
+    }
+
+    clear() {
+        const { container } = this.refs;
+
+        for (const child of Array.from(container.childNodes)) {
+            container.removeChild(child);
+        }
+
+        delete this.map;
+    }
+
+    drawMap() {
+
+
+        let map = this.map;
+        let dataset = {};
+
+        // fill dataset in appropriate format
+        this.props.resultadosAno.forEach(function (item) { //
+
+            let iso = item["id"],
+                PP = item["PP"][0],
+                PSOE = item["PSOE"][0],
+                Podemos = item["Podemos"][0],
+                Ciu = item["CiU"][0];
+            dataset[iso] = { votosPP: PP,votosPSOE: PSOE,votosPodemos: Podemos,votosCiu:Ciu,
+                fillColor: item["color"] };
+
+
+        });
+
+        if (!map) {
+             map =this.map = new Datamap({
+                element: document.getElementById('cloropleth_map'),
+                scope: 'spain',
+                geographyConfig: {
+                    popupOnHover: true,
+                    highlightOnHover: true,
+                    borderColor: '#444',
+                    highlightBorderWidth: 1,
+                    borderWidth: 0.5,
+                    dataJson: espJson,
+
+                },
+                fills: {
+                    HIGH: '#afafaf',
+                    LOW: '#123456',
+                    MEDIUM: 'blue',
+                    UNKNOWN: 'rgb(0,0,0)',
+                    defaultFill: '#eee'
+                },
+                data: dataset,
+                setProjection: function (element) {
+                    let projection = d3.geoMercator()
+                        .center([3.70325, 40.4167]) // always in [East Latitude, North Longitude]
+                        .scale(1000)
+                        .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+
+                    let path = d3.geoPath().projection(projection);
+                    return { path: path, projection: projection };
+                }
+            });
+
+        } else {
+
+            map.updateChoropleth({Madrid: this.props.resultadosAno[0]["color"]}, {reset: false});
+            map.updateChoropleth({Murcia: this.props.resultadosAno[1]["color"]}, {reset: false});
+            map.updateChoropleth({Asturias: this.props.resultadosAno[2]["color"]}, {reset: false});
+
+
+
+
+        }
+
+    }
+
+
+    resizeMap() {
+        this.map.resize();
+    }
+
+
+
 
 
 
     render() {
-      var data = [
-        ["Provinces", "Latitude"],
-        [{v: 'ES-MD', f: 'Madrid'}, this.Maximo(this.props.resultadosAno[0])],
-        [{v: 'ES-CT', f: 'Cataluña'}, 2],
 
-
-
-  ];
-
-
+       // console.log(this.props.resultadosAno);
         return (
-          <div className="App">
-                  <Chart chartType="GeoChart" width="100%" height="400px"  options={{ region : 'ES', resolution : 'provinces', colorAxis: {colors: ['blue', 'orange', 'red','purple']}}} data={data}
-
-/>
-          </div>
+            <div id="cloropleth_map" style={{
+                height: "150%",
+                width: "150%",
+            }}></div>
         );
     }
 }

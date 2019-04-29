@@ -10,6 +10,7 @@ const barOptions = {
       };
 
 export default class Barras extends React.Component {
+    resultado;
 
 
     render(){
