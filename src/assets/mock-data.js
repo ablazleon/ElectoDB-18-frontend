@@ -6,14 +6,15 @@ votos= (PP, PSOE, Ciu, Podemos, Otros)
 escaños=(PP, PSOE, Ciu, Podemos, Otros)
 */
 export const resultados1 =[
-	[//2016
+	[//2019
 		{
 		"id": "Madrid", //Madrid
 		"PP":[1315847, 15],
 		"PSOE":[674825, 7],
 		"Podemos":[729870, 8],
 		"CiU":[610391, 6],
-		"color":"blue"
+		"color":"purple",
+			"year":"2019"
 		},
 		{
 		"id": "Murcia", //Murcia
@@ -21,93 +22,104 @@ export const resultados1 =[
 		"PSOE":[144322, 2],
 		"Podemos":[102355, 2],
 		"CiU":[111574, 1],
-		"color":"blue"
+		"color":"blue",
+			"year":"2019"
 		},
 		{
 		"id": "Asturias", //Asturias
 		"PP":[207811, 3],
-		"PSOE":[146336, 2],
+		"PSOE":[346336, 2],
 		"Podemos":[140058, 2],
 		"CiU":[74370, 1],
-		"color":"blue"
+		"color":"orange",
+			"year":"2019"
+		}
+	],
+	[ //2016
+		{
+		"id": "Madrid", //Madrid
+		"PP":[1203837, 13],
+		"PSOE":[843158, 6],
+		"Podemos":[650477, 8],
+		"CiU":[676389, 7],
+		"color":"red",
+			"year":"2016"
+		},
+		{
+			"id": "Murcia", //Murcia
+			"PP":[393546, 5],
+			"PSOE":[147524,2],
+			"Podemos":[210089, 1],
+			"CiU":[528294, 2],
+		"color":"orage",
+			"year":"2016"
+		},
+		{
+			"id": "Asturias", //Asturias
+			"PP":[186586, 3],
+			"PSOE":[144017, 2],
+			"Podemos":[532007, 2],
+			"CiU":[33885, 1],
+		"color":"purple",
+			"year":"2016"
 		}
 	],
 	[ //2015
 		{
-		"id": 0, //Madrid
-		"PP":[1203837, 13],
-		"PSOE":[643158, 6],
-		"Podemos":[750477, 8],
-		"CiU":[676389, 7],
-		"color":"blue"
-		},
-		{
-			"id": 1, //Murcia
-			"PP":[293546, 5],
-			"PSOE":[147524,2],
-			"Podemos":[110089, 1],
-			"CiU":[128294, 2],
-		"color":"blue"
-		},
-		{
-			"id": 2, //Asturias
-			"PP":[186586, 3],
-			"PSOE":[144017, 2],
-			"Podemos":[132007, 2],
-			"CiU":[83885, 1],
-		"color":"blue"
-		}
-	],
-	[ //2011
-		{
-		"id": 0,
+		"id": "Madrid",
 		"PP":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"blue"
+		"color":"red",
+			"year":"2015"
 		},
 		{
-			"id": 1,
+			"id": "Murcia",
 			"PP":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"red"
+		"color":"orange",
+			"year":"2015"
 		},
 		{
-			"id": 2,
+			"id": "Asturias",
 			"PP":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"blue"
+		"color":"blue",
+			"year":"2015"
 		}
 	],
-	[ // 2008
+	[ // 2011
 		{
-		"id": 0,
+		"id": "Madrid",
 		"PP":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 		"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"blue"
+		"color":"blue",
+			"year":"2011"
 		},
 		{
-			"id": 0,
+			"id": "Murcia",
 			"PP":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"red"
+		"color":"red",
+			"year":"2011"
 		},
 		{
-			"id": 0,
+			"id": "Asturias",
 			"PP":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"PSOE":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"Podemos":[(Math.random()*300+1)*1000, Math.random()*10+1],
 			"CiU":[(Math.random()*300+1)*1000, Math.random()*10+1],
-		"color":"blue"
+		"color":"purple",
+			"year":"2011"
 		}
 	]
 ];
