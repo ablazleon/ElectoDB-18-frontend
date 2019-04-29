@@ -2,7 +2,6 @@
   background-color: white;
  }
 
-
  .Titulo{
    color: #46514f;
    font-family: 'Raleway',sans-serif;
@@ -25,13 +24,24 @@
 }
 .Content{
   height: 400px;
-  margin: 50px 20px 20px 20px ;
+    width: 70%;
+  margin: 50px 0px 20px 0px ;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-
 }
+.datamap{
+    height: 600px;
+    width: 70%;
+}
+
+.Maps{
+    height: 400px;
+    width: 70%;
+    align-content: center;
+}
+
 .ContentTerminado{
   background-color: #25c6a9;
 }
@@ -49,8 +59,9 @@
     background-color: #25c6a9;
     border-radius: 15px;
     border: 3px double #187a68;
-
   }
+
+
 .Botones:disabled:hover{
     background-color: #1b8975;
     color: #394240;
