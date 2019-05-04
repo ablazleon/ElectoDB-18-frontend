@@ -2,11 +2,29 @@ import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import Game from './componentes/Game'
-import {dual, cambiaLey, cambiaAno, cambiaRegion} from './redux/actions.js';
+import {dual, cambiaLey, cambiaAno, cambiaRegion, cambiaTest} from './redux/actions.js';
 import Header from "./componentes/Header";
+//import { Chart } from 'react-google-charts';
+
 
 
 class App extends Component {
+
+  componentDidMount() {
+    console.log("funciona");
+    let url = "http://localhost:8080/ISST-19-rest/rest/resultados";
+    fetch(url)
+    .then(res => {
+      //this.props.dispatch(this.setState({test: "Cambio"}));
+      return res.json();
+    })
+    .then(json => {
+      this.props.dispatch(cambiaTest(JSON.stringify(json)));
+    })
+    .catch(error =>{
+        console.log(error)
+    });
+  }
 
   render() {
      //console.log(this.props.resultados[0][0]);
@@ -24,8 +42,10 @@ let resultados= "Madrid " +"PP: "+ this.props.resultados[this.props.currentAno][
               resultados={this.props.resultados}
               indexRegion={this.props.currentRegion}
               indexAno={this.props.currentAno}
+              test = {this.props.test}
               onChangeLey={ (id)=> {this.props.dispatch(cambiaLey(id))}}
-              onChangeAno={ (buttonName) => {this.props.dispatch(cambiaAno(buttonName))}}/>
+              onChangeAno={ (buttonName) => {this.props.dispatch(cambiaAno(buttonName))}}
+              onChangeTest = { (nuevoTest) => {this.props.dispatch(cambiaTest(nuevoTest))}}/>
       </div>
       );
     }

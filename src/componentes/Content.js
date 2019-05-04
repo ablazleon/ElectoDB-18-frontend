@@ -1,7 +1,7 @@
 import React from 'react';
 import Hemiciclo from './Hemiciclo.js';
 import Barras from './Barras.js';
-import ChoroplethMap from './ChoroplethMap.js'
+import ChoroplethMap from './ChoroplethMap.js';
 
 
 

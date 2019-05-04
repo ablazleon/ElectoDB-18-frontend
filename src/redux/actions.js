@@ -1,8 +1,8 @@
-
 export const DUAL = 'DUAL';
 export const CAMBIA_LEY = 'CAMBIA_LEY';
 export const CAMBIA_ANO = 'CAMBIA_ANO';
 export const CAMBIA_REGION = 'CAMBIA_REGION';
+export const CAMBIA_TEST = 'CAMBIA_TEST';
 
 
 export function dual(tipo){
@@ -21,5 +21,6 @@ export function cambiaRegion(id){
     return {type: CAMBIA_REGION, payload: id};
 }
 
-
-
+export function cambiaTest(nuevoTest){
+    return {type: CAMBIA_TEST, payload: nuevoTest};
+}

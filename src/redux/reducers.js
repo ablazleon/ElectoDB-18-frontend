@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { DUAL, CAMBIA_LEY, CAMBIA_ANO, CAMBIA_REGION } from './actions';
+import { DUAL, CAMBIA_LEY, CAMBIA_ANO, CAMBIA_REGION, CAMBIA_TEST} from './actions';
 import { resultados1, resultados2 } from "../assets/mock-data"
 
 function dual(state = false, action = {}) {
@@ -15,7 +15,6 @@ function currentLey(state = 0, action = {}) {
     switch(action.type) {
         case CAMBIA_LEY:
             return action.payload;
-            break;
         default:
             return state;
     }
@@ -24,7 +23,6 @@ function currentLey(state = 0, action = {}) {
     switch(action.type) {
         case CAMBIA_ANO:
             return action.payload;
-            break;
         default:
             return state;
     }
@@ -34,7 +32,6 @@ function currentRegion(state = 0, action = {}) {
     switch(action.type) {
         case CAMBIA_REGION:
             return action.payload;
-            break;
         default:
             return state;
     }
@@ -54,12 +51,22 @@ function resultados(state = [], action = {}) {
   }
 }
 
+function test(state = "Estado defecto después de ejecutar", action = {}) {
+  switch(action.type) {
+      case CAMBIA_TEST:
+          return action.payload;
+      default:
+          return state;
+  }
+}
+
 const GlobalState = combineReducers({
     dual,
     currentLey,
     currentAno,
     currentRegion,
-    resultados
+    resultados,
+    test
 });
 
 export default GlobalState;
