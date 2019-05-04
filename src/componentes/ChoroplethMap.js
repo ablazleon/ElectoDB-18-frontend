@@ -98,10 +98,17 @@ class ChoroplethMap extends React.Component {
             });
 
         } else {
-
-            map.updateChoropleth({Madrid: this.props.resultadosAno[0]["color"]}, {reset: false});
+            for(var i = 0; i < 52; i++){
+                var data = {};
+                var provincia = this.props.test.mapa[i]["provincia"];
+                data[provincia] = this.props.test.mapa[i]["color"];
+                //console.log(provincia);
+                map.updateChoropleth(data, {reset: false});
+            }
+            //map.updateChoropleth({"Madrid": this.props.test["mapa"][1]["color"]}, {reset: false});
+            /*map.updateChoropleth({Madrid: this.props.resultadosAno[0]["color"]}, {reset: false});
             map.updateChoropleth({Murcia: this.props.resultadosAno[1]["color"]}, {reset: false});
-            map.updateChoropleth({Asturias: this.props.resultadosAno[2]["color"]}, {reset: false});
+            map.updateChoropleth({Asturias: this.props.resultadosAno[2]["color"]}, {reset: false});*/
         }
     }
 

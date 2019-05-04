@@ -10,7 +10,7 @@ import Header from "./componentes/Header";
 
 class App extends Component {
 
-  componentDidMount() {
+  componentWillMount() {
     console.log("funciona");
     let url = "http://localhost:8080/ISST-19-rest/rest/resultados";
     fetch(url)
@@ -19,7 +19,7 @@ class App extends Component {
       return res.json();
     })
     .then(json => {
-      this.props.dispatch(cambiaTest(JSON.stringify(json)));
+      this.props.dispatch(cambiaTest(json));
     })
     .catch(error =>{
         console.log(error)

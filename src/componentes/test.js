@@ -24,7 +24,7 @@ export default class Test extends React.Component {
             <div>
               <button type="button" onClick={() => this.Recibir()}>Click Me</button>
               <div>
-                {this.props.test}
+                {JSON.stringify(this.props.test)}
               </div>
             </div>
         );

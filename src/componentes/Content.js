@@ -15,7 +15,7 @@ export default class Content extends React.Component {
         <Barras resultado={this.props.resultado}/>
         </div>
         <div className={"Maps"}>
-        <ChoroplethMap  resultadosAno={this.props.resultadosAno} onChangeRegion={this.props.onChangeRegion}/>
+        <ChoroplethMap  resultadosAno={this.props.resultadosAno} onChangeRegion={this.props.onChangeRegion} test={this.props.test}/>
         </div>
         </div>
         );

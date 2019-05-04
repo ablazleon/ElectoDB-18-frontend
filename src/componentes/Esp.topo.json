@@ -343,9 +343,9 @@
         {
           "type": "MultiPolygon",
           "properties": {
-            "name": "Ciudad Real"
+            "name": "CiudadReal"
           },
-          "id": "Ciudad Real",
+          "id": "CiudadReal",
           "arcs": [
             [
               [
@@ -520,9 +520,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "La Coruña"
+            "name": "LaCoruña"
           },
-          "id": "La Coruña",
+          "id": "LaCoruña",
           "arcs": [
             [
               115,
@@ -534,9 +534,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "La Rioja"
+            "name": "LaRioja"
           },
-          "id": "La Rioja",
+          "id": "LaRioja",
           "arcs": [
             [
               118,
@@ -550,9 +550,9 @@
         {
           "type": "MultiPolygon",
           "properties": {
-            "name": "Las Palmas"
+            "name": "LasPalmas"
           },
-          "id": "Las Palmas",
+          "id": "LasPalmas",
           "arcs": [
             [
               [
@@ -809,9 +809,9 @@
         {
           "type": "MultiPolygon",
           "properties": {
-            "name": "Santa Cruz de Tenerife"
+            "name": "SantaCruzdeTenerife"
           },
-          "id": "Santa Cruz de Tenerife",
+          "id": "SantaCruzdeTenerife",
           "arcs": [
             [
               [
