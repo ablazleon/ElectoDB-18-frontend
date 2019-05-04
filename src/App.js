@@ -45,7 +45,8 @@ let resultados= "Madrid " +"PP: "+ this.props.resultados[this.props.currentAno][
               test = {this.props.test}
               onChangeLey={ (id)=> {this.props.dispatch(cambiaLey(id))}}
               onChangeAno={ (buttonName) => {this.props.dispatch(cambiaAno(buttonName))}}
-              onChangeTest = { (nuevoTest) => {this.props.dispatch(cambiaTest(nuevoTest))}}/>
+              onChangeTest = { (nuevoTest) => {this.props.dispatch(cambiaTest(nuevoTest))}}
+              onChangeRegion = { (id) => {this.props.dispatch(cambiaRegion(id))}}/>
       </div>
       );
     }

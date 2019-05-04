@@ -2,6 +2,9 @@ import { combineReducers } from 'redux';
 import { DUAL, CAMBIA_LEY, CAMBIA_ANO, CAMBIA_REGION, CAMBIA_TEST} from './actions';
 import { resultados1, resultados2 } from "../assets/mock-data"
 
+
+
+
 function dual(state = false, action = {}) {
     switch(action.type) {
         case DUAL:
@@ -46,6 +49,8 @@ function resultados(state = [], action = {}) {
           if (action.payload===1)
             return [...resultados2];
           break;
+      case CAMBIA_REGION:
+
       default:
           return state;
   }
