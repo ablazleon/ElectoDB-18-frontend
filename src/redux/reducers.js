@@ -60,8 +60,8 @@ function resultados(state = {}, action = {}) {
               });
           break;
       case CAMBIA_TEST:
-          console.log(JSON.stringify(action.payload));
-          return JSON.parse(action.payload);
+          //console.log(JSON.stringify(action.payload));
+          return action.payload;
       default:
           return state;
   }

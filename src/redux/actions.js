@@ -23,7 +23,6 @@ export function cambiaRegion(escenarioNuevo){
 }
 
 export function cambiaTest(escenarioInicial){
-    console.log('entraaaaa');
     return {type: CAMBIA_TEST, payload: escenarioInicial};
 }
 

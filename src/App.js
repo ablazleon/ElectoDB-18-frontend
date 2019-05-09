@@ -12,21 +12,16 @@ import {cambiaPartido} from "./redux/actions";
 class App extends Component {
 
   componentWillMount() {
-    //console.log("funciona");
-    let url = "http://localhost:8080/ISST-19-rest/rest/resultados";
+    let url = "http://localhost:8080/ISST-19-rest/rest/resultados?provincia=Alicante";
     fetch(url)
     .then(res => {
-      //this.props.dispatch(this.setState({test: "Cambio"}));
       return res.json();
     })
     .then(json => {
         this.props.dispatch(cambiaTest(json));
-
-      console.log("Funciona leer");
     })
     .catch(error =>{
         console.log(error);
-        console.log("No se han podido cargar los datos inicialmente");
     });
   }
 

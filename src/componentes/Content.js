@@ -18,7 +18,12 @@ export default class Content extends React.Component {
                 //test={this.props.test}
         />
         </div>
-        <div className={"Maps"}>
+        </div>
+        );
+    }
+};
+/*
+<div className={"Maps"}>
         <ChoroplethMap  resultadosAno={this.props.resultadosAno}
                         onChangeRegion={this.props.onChangeRegion}
                         test={this.props.test}
@@ -26,7 +31,4 @@ export default class Content extends React.Component {
                         leyActual={this.props.currentLey}
         />
         </div>
-        </div>
-        );
-    }
-};
+*/

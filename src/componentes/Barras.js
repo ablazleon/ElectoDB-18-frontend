@@ -17,9 +17,8 @@ export default class Barras extends React.Component {
 
     render(){
         let datos = [["Element", "Density", { role: "style" } ]];
-        console.log('HHbbbewduuei');
         this.props.resultados.votos.forEach( (jsonito)=>{
-            datos.push([jsonito.partido, jsonito.votos, "blue"]);
+            datos.push([jsonito.partido, jsonito.votos, jsonito.color]);
         });
         return(
 
@@ -28,8 +27,6 @@ export default class Barras extends React.Component {
 
           chartType="BarChart"
           data={datos}
-
-
           /*data={[ ["Element", "Density", { role: "style" } ],
               ['PP', partido[0]["votos"], "blue"],
               ['PSOE', partido["votos"], "red"],
@@ -37,8 +34,6 @@ export default class Barras extends React.Component {
               ['Podemos', partido["votos"], "purple"],
               ['VOX', this.partido["votos"], "yellow"]
           ]}*/
-
-
           options={barOptions}
           graph_id="BarChart"
           width= {"100%"}
