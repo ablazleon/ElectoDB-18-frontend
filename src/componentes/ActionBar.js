@@ -1,6 +1,7 @@
 import React from 'react';
 import Boton from './Boton.js'
 import Selector from './Selector.js'
+import Content from "./Content";
 export default class ActionBar extends React.Component {
     render(){
 
@@ -10,11 +11,31 @@ export default class ActionBar extends React.Component {
                <Boton buttonName="Anterior" question={this.props.question} finished={this.props.finished} onChangeQuestion={this.props.onChangeQuestion}indexQuestion={this.props.indexQuestion}/>
                <Boton buttonName="Siguiente" question={this.props.question} finished={this.props.finished} onChangeQuestion={this.props.onChangeQuestion}indexQuestion={this.props.indexQuestion}/> */}
 
-		<Boton buttonName="2019" onChangeAno={this.props.onChangeAno}/>
-		<Boton buttonName="2016" onChangeAno={this.props.onChangeAno}/>
-		<Boton buttonName="2015" onChangeAno={this.props.onChangeAno}/>
-		<Boton buttonName="2011" onChangeAno={this.props.onChangeAno}/>
-    <Selector onChangeLey={this.props.onChangeLey}/>
+		<Boton buttonName="2019"
+               onChangeAno={this.props.onChangeAno}
+               regionActual={this.props.regionActual}
+               leyActual={this.props.leyActual}
+        />
+		<Boton buttonName="2016"
+               onChangeAno={this.props.onChangeAno}
+               regionActual={this.props.regionActual}
+               leyActual={this.props.leyActual}
+        />
+
+		<Boton buttonName="2015"
+               onChangeAno={this.props.onChangeAno}
+               regionActual={this.props.regionActual}
+               leyActual={this.props.leyActual}
+        />
+		<Boton buttonName="2011"
+               onChangeAno={this.props.onChangeAno}
+               regionActual={this.props.regionActual}
+               leyActual={this.props.leyActual}
+        />
+        <Selector onChangeLey={this.props.onChangeLey}
+              regionActual={this.props.regionActual}
+              anoActual={this.props.anoActual}
+        />
             </div>
         );
     }

@@ -3,7 +3,7 @@ import GlobalState from './reducers';
 import { createStore } from 'redux';
 import React from 'react';
 import App from '../App';
-import { resultados1/*,resultados2*/} from "../assets/mock-data"
+/?import { resultados1 } from '../assets/mock-data';
 
 
 
@@ -16,9 +16,10 @@ export default class ReduxProvider extends React.Component {
 		currentLey: 0, //la 0 es la ley d'hondt
 		currentAno: 0, //año 5 corresponde con 2019, 4=2016, 3=2011, etc
 		currentRegion: 0, //la 0 es españa, el resto de provincias tendrán su código
-		resultados: [...resultados1],
-        test: "Estado defecto"
-    
+		//resultados: [...resultados1],
+        resultados : {}
+       // test: "Estado defecto"
+
         };
         this.store = this.configureStore();
     }

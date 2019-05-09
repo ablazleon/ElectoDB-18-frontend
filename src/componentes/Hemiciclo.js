@@ -9,26 +9,30 @@ const pieOptions = {
           width: 500,
           pieSliceText: 'none',
           pieStartAngle: 270,
-          slices: {
-		    0: { color: '#3366CC' },
+          /*slices: {
+  	        0: { color: '#3366CC' },
 		    1: { color: 'red'},
 		    2: { color: 'orange'},
 		    3: { color: 'purple'},
 		    4: { color: 'green'},
 		    5: { color: 'white'}
-		  }
+		  }*/
 	};
 
 export default class Hemiciclo extends React.Component {
-resultado;
 
     render(){
-
+        let datos = [['Pac Man', 'Percentage']];
+        console.log(JSON.stringify(this.props.resultados));
+        this.props.resultados.votos.forEach( (jsonito)=>{
+            datos.push([jsonito.partido, jsonito.escanos]);
+        });
         return(
 
 	<Chart
           chartType="PieChart"
-          data={[ ['Pac Man', 'Percentage'],
+          data={datos}
+          /*data={[ ['Pac Man', 'Percentage'],
           ['PP', this.props.resultado["PP"][1]],
           ['PSOE', this.props.resultado["PSOE"][1]],
           ['CIUDADANOS', this.props.resultado["CiU"][1]],
@@ -36,7 +40,7 @@ resultado;
           ['VOX', 0],
 
           ['', (this.props.resultado["PP"][1]+this.props.resultado["PSOE"][1]+this.props.resultado["CiU"][1]+this.props.resultado["Podemos"][1])]
-        ]}
+        ]}*/
           options={pieOptions}
           graph_id="PieChart"
           width={"100%"}

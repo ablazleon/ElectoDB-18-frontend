@@ -11,24 +11,39 @@ const barOptions = {
       };
 
 export default class Barras extends React.Component {
-    resultado;
+
+
 
 
     render(){
+        let datos = [["Element", "Density", { role: "style" } ]];
+        console.log('HHbbbewduuei');
+        this.props.resultados.votos.forEach( (jsonito)=>{
+            datos.push([jsonito.partido, jsonito.votos, "blue"]);
+        });
         return(
 
+
 	<Chart
+
           chartType="BarChart"
-          data={[ ["Element", "Density", { role: "style" } ],
-          ['PP', this.props.resultado["PP"][0], "blue"],
-          ['PSOE', this.props.resultado["PSOE"][0], "red"],
-          ['CIUDADANOS', this.props.resultado["CiU"][0], "orange"],
-          ['UNIDAS PODEMOS', this.props.resultado["Podemos"][0], "purple"]
-          ]}
+          data={datos}
+
+
+          /*data={[ ["Element", "Density", { role: "style" } ],
+              ['PP', partido[0]["votos"], "blue"],
+              ['PSOE', partido["votos"], "red"],
+              ['CIU', partido["votos"], "orange"],
+              ['Podemos', partido["votos"], "purple"],
+              ['VOX', this.partido["votos"], "yellow"]
+          ]}*/
+
+
           options={barOptions}
           graph_id="BarChart"
           width= {"100%"}
           height= {"400px"}
+
 
         />
         );

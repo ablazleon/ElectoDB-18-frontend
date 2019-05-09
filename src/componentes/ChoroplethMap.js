@@ -6,6 +6,7 @@ class ChoroplethMap extends React.Component {
 
     constructor(props){
         super(props);
+
     }
 
     componentDidMount() {
@@ -29,11 +30,13 @@ class ChoroplethMap extends React.Component {
         delete this.map;
     }
 
+
+
     drawMap() {
 
         let map = this.map;
         let dataset = {};
-        let onChangeRegion = this.props.onChangeRegion
+        let onChangeRegion = this.props.onChangeRegion;
         // fill dataset in appropriate format
         this.props.resultadosAno.forEach(function (item) { //
 
@@ -81,26 +84,21 @@ class ChoroplethMap extends React.Component {
                 done: function(datamap) {
                     datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
                         //alert(geography.id);
-                        onChangeRegion(1);
-                        /*var state_id = geography.id;
-                        var fillkey_obj = datamap.options.data[state_id] || {fillKey: 'defaultFill'};
-                        var fillkey = fillkey_obj.fillKey;;
-                        var fillkeys = Object.keys(fills);
-                        var antikey = fillkeys[Math.abs(fillkeys.indexOf(fillkey) - 1)];
-                        var new_fills = {
-                          [geography.id] : {
-                            fillKey: antikey
-                          }
-                        };
-                        datamap.updateChoropleth(new_fills);*/
+                        //onChangeRegion(1);
+
+                        let ano = this.props.anoActual;
+                        let ley = this.props.leyActual;
+                        let region = geography.id;
+                        let escenarioNuevo = {"ano": ano, "region": region, "ley": ley};
+                        this.props.onChangeRegion(escenarioNuevo);
                     });
                 }
             });
 
         } else {
-            for(var i = 0; i < 52; i++){
-                var data = {};
-                var provincia = this.props.test.mapa[i]["provincia"];
+            for(let i = 0; i < 52; i++){
+                let data = {};
+                let provincia = this.props.test.mapa[i]["provincia"];
                 data[provincia] = this.props.test.mapa[i]["color"];
                 //console.log(provincia);
                 map.updateChoropleth(data, {reset: false});
@@ -121,10 +119,7 @@ class ChoroplethMap extends React.Component {
 
        // console.log(this.props.resultadosAno);
         return (
-            <div id="cloropleth_map" style={{
-                height: "150%",
-                width: "150%",
-            }}></div>
+            <div id="cloropleth_map" style={{height: "150%",width: "150%"}}></div>
         );
     }
 }
