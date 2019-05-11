@@ -11,24 +11,20 @@ export default class Content extends React.Component {
     return(
         <div>
         <div className="Content">
-        <Hemiciclo resultados={this.props.resultados}
-                   //test={this.props.test}
-        />
-        <Barras resultados={this.props.resultados}
-                //test={this.props.test}
-        />
+        <Hemiciclo resultados={this.props.resultados}/>
+        <Barras resultados={this.props.resultados}/>
+        </div>
+        <div className={"Maps"}>
+            <ChoroplethMap  resultados={this.props.resultados}
+                            onChangeRegion={this.props.onChangeRegion}
+                            onChangeAno={this.props.onChangeAno}
+                            anoActual={this.props.anoActual}
+                            leyActual={this.props.leyActual}
+                            onChangeTest = {this.props.onChangeTest}
+            />
         </div>
         </div>
         );
     }
 };
-/*
-<div className={"Maps"}>
-        <ChoroplethMap  resultadosAno={this.props.resultadosAno}
-                        onChangeRegion={this.props.onChangeRegion}
-                        test={this.props.test}
-                        anoActual={this.props.currentAno}
-                        leyActual={this.props.currentLey}
-        />
-        </div>
-*/
+

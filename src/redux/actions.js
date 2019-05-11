@@ -10,19 +10,19 @@ export function dual(tipo){
     return {type: DUAL, payload: tipo};
 }
 
-export function cambiaLey(escenarioNuevo){
-    return {type: CAMBIA_LEY, payload: escenarioNuevo};
+export function cambiaLey(leyNueva){
+    return {type: CAMBIA_LEY, payload: leyNueva};
 }
 
-export function cambiaAno(escenarioNuevo){
-    return {type: CAMBIA_ANO, payload: escenarioNuevo};
+export function cambiaAno(anoNuevo){
+    return {type: CAMBIA_ANO, payload: anoNuevo};
 }
 
-export function cambiaRegion(escenarioNuevo){
-    return {type: CAMBIA_REGION, payload: escenarioNuevo};
+export function cambiaRegion(region){
+    return {type: CAMBIA_REGION, payload: region};
 }
 
-export function cambiaTest(escenarioInicial){
-    return {type: CAMBIA_TEST, payload: escenarioInicial};
+export function cambiaTest(resultadosNuevos){
+    return {type: CAMBIA_TEST, payload: resultadosNuevos};
 }
 

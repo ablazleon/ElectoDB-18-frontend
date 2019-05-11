@@ -11,7 +11,7 @@ import {cambiaPartido} from "./redux/actions";
 
 class App extends Component {
 
-  componentWillMount() {
+  /*componentWillMount() {
     let url = "http://localhost:8080/ISST-19-rest/rest/resultados?provincia=Alicante";
     fetch(url)
     .then(res => {
@@ -19,23 +19,24 @@ class App extends Component {
     })
     .then(json => {
         this.props.dispatch(cambiaTest(json));
+        console.log("algo");
     })
     .catch(error =>{
         console.log(error);
     });
-  }
+  }*/
 
   render() {
       return (
       <div className = "Aplicacion">
-        <Game regionActual={this.props.currentRegion}
-              anoActual={this.props.currentAno}
-              leyActual={this.props.currentLey}
+        <Game currentRegion={this.props.currentRegion}
+              currentAno={this.props.currentAno}
+              currentLey={this.props.currentLey}
               resultados={this.props.resultados}
-              onChangeLey={ (escenarioNuevo)=> {this.props.dispatch(cambiaLey(escenarioNuevo))}}
-              onChangeAno={ (escenarioNuevo) => {this.props.dispatch(cambiaAno(escenarioNuevo))}}
-              onChangeRegion = { (escenarioNuevo) => {this.props.dispatch(cambiaRegion(escenarioNuevo))}}
-              onChangeTest = { (escenarioInicial) => {this.props.dispatch(cambiaTest(escenarioInicial))}}
+              onChangeLey={ (leyNueva)=> {this.props.dispatch(cambiaLey(leyNueva))}}
+              onChangeAno={ (anoNueva) => {this.props.dispatch(cambiaAno(anoNueva))}}
+              onChangeRegion = { (regionNueva) => {this.props.dispatch(cambiaRegion(regionNueva))}}
+              onChangeTest = { (resultadosNuevos) => {this.props.dispatch(cambiaTest(resultadosNuevos))}}
         />
       </div>
       );

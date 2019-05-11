@@ -12,21 +12,31 @@ const barOptions = {
 
 export default class Barras extends React.Component {
 
+    constructor(props){
+      super(props);
+      //this.Selecta = this.Selecta.bind(this);
+      this.datosBarras = this.datosBarras.bind(this);
+    }
 
-
+    datosBarras(){
+      let resultados = this.props.resultados;
+      let datos = [["Element", "Density", { role: "style" } ]];
+      resultados.votos.forEach( (jsonito)=>{
+          //console.log(JSON.stringify(jsonito));
+          datos.push([jsonito.partido, jsonito.votos, jsonito.color]);
+      });
+      return datos;
+    }
 
     render(){
-        let datos = [["Element", "Density", { role: "style" } ]];
-        this.props.resultados.votos.forEach( (jsonito)=>{
-            datos.push([jsonito.partido, jsonito.votos, jsonito.color]);
-        });
+        
         return(
 
 
 	<Chart
 
           chartType="BarChart"
-          data={datos}
+          data={this.datosBarras()}
           /*data={[ ["Element", "Density", { role: "style" } ],
               ['PP', partido[0]["votos"], "blue"],
               ['PSOE', partido["votos"], "red"],

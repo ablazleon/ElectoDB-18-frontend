@@ -2,11 +2,15 @@ import React from 'react';
 import { Chart } from 'react-google-charts';
 
 export default class Hemiciclo extends React.Component {
+    constructor(props){
+        super(props);
+    }
 
     render(){
         // variable con los escaños de cada partido
         let datos = [['Pac Man', 'Percentage']];
         let suma = 0;
+        //console.log("Hemiciclo-----------------------------------------------"+JSON.stringify(this.props.resultados.votos));
         this.props.resultados.votos.forEach( (jsonito)=>{
             suma += jsonito.escanos;
             datos.push([jsonito.partido, jsonito.escanos]);
@@ -35,14 +39,6 @@ export default class Hemiciclo extends React.Component {
 	       <Chart
           chartType="PieChart"
           data={datos}
-          /*data={[['Pac Man', 'Percentage'],
-                ['PP', this.props.resultado["PP"][1]],
-                ['PSOE', this.props.resultado["PSOE"][1]],
-                ['CIUDADANOS', this.props.resultado["CiU"][1]],
-                ['UNIDAS PODEMOS', this.props.resultado["Podemos"][1]],
-                ['VOX', 0],
-                ['', (this.props.resultado["PP"][1]+this.props.resultado["PSOE"][1]+this.props.resultado["CiU"][1]+this.props.resultado["Podemos"][1])]
-                ]}*/
           options={pieOptions}
           graph_id="PieChart"
           width={"100%"}

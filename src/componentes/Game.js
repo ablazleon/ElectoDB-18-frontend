@@ -15,11 +15,13 @@ export default class Game extends React.Component {
                        regionActual={this.props.regionActual}
                        anoActual={this.props.anoActual}
                        leyActual={this.props.leyActual}           />
-            <Content resultados={this.props.resultados}
-                     onChangeRegion={this.props.onChangeRegion}
-                     regionActual={this.props.regionActual}
-                     anoActual={this.props.anoActual}
-                     leyActual={this.props.leyActual}
+            <Content    resultados={this.props.resultados}
+                        currentRegion={this.props.currentRegion}
+                        currentAno={this.props.currentAno}
+                        currentLey={this.props.currentLey}
+                        onChangeRegion={this.props.onChangeRegion}
+                        onChangeAno={this.props.onChangeAno}
+                        onChangeTest = {this.props.onChangeTest}
             />
 
             </div>

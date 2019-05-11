@@ -14,18 +14,14 @@ export default class ReduxProvider extends React.Component {
         this.initialState = {
 		dual: false,
 		currentLey: 0, //la 0 es la ley d'hondt
-		currentAno: 0, //año 5 corresponde con 2019, 4=2016, 3=2011, etc
-		currentRegion: 0, //la 0 es españa, el resto de provincias tendrán su código
-		//resultados: [...resultados1],
+		currentAno: 2016,
+		currentRegion: "Madrid", //la 0 es españa, el resto de provincias tendrán su código
         resultados : JSON.parse(resultados1)
-       // test: "Estado defecto"
 
         };
         this.store = this.configureStore();
     }
-
-
-
+    
     render() {
         return (
             <Provider store={this.store}>

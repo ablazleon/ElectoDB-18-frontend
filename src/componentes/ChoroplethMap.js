@@ -6,6 +6,7 @@ class ChoroplethMap extends React.Component {
 
     constructor(props){
         super(props);
+        this.cambiarRegionVotos = this.cambiarRegionVotos.bind(this);
     }
 
     componentDidMount() {
@@ -22,29 +23,48 @@ class ChoroplethMap extends React.Component {
 
     clear() {
         const { container } = this.refs;
-
         for (const child of Array.from(container.childNodes)) {
             container.removeChild(child);
         }
         delete this.map;
     }
 
+    cambiarRegionVotos(region){
+        let ano = this.props.anoActual;
+        let ley = this.props.leyActual;
+        console.log(ley);
+        let datosAntiguo = this.props.resultados;
+        let url = 'http://localhost:8080/ISST-19-rest/rest/resultados?anno='+ano+'&provincia='+region+'&leyEscano='+ley;
+        fetch(url)
+        .then(res => {
+            return res.json();
+        })
+        .then(json => {
+            let votosNuevos = json.votos;
+            datosAntiguo.votos = votosNuevos;
+            console.log(JSON.stringify(datosAntiguo));
+            this.props.onChangeAno(2015);
+            this.props.onChangeAno(2016);
+            return(this.props.onChangeTest(datosAntiguo));
+
+        })
+        .catch(error =>{
+            console.log(error);
+        });
+    }
+
 
 
     drawMap() {
-
+        let cambiarRegionVotos = this.cambiarRegionVotos;
         let map = this.map;
         let dataset = {};
-        let onChangeRegion = this.props.onChangeRegion;
         // fill dataset in appropriate format
-        this.props.resultadosAno.forEach(function (item) { //
+        this.props.resultados.mapa.forEach(function (item) { //
 
-            let iso = item["id"],
-                PP = item["PP"][0],
-                PSOE = item["PSOE"][0],
-                Podemos = item["Podemos"][0],
-                Ciu = item["CiU"][0];
-            dataset[iso] = { votosPP: PP,votosPSOE: PSOE,votosPodemos: Podemos,votosCiu:Ciu,
+            let iso = item["provincia"],
+                votos = item["votos"];
+            dataset[iso] = { votosPartido: votos,
                 fillColor: item["color"] };
 
         });
@@ -82,14 +102,7 @@ class ChoroplethMap extends React.Component {
                 },
                 done: function(datamap) {
                     datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-                        //alert(geography.id);
-                        //onChangeRegion(1);
-
-                        let ano = this.props.anoActual;
-                        let ley = this.props.leyActual;
-                        let region = geography.id;
-                        let escenarioNuevo = {"ano": ano, "region": region, "ley": ley};
-                        this.props.onChangeRegion(escenarioNuevo);
+                        cambiarRegionVotos(geography.id);
                     });
                 }
             });
@@ -97,9 +110,8 @@ class ChoroplethMap extends React.Component {
         } else {
             for(let i = 0; i < 52; i++){
                 let data = {};
-                let provincia = this.props.test.mapa[i]["provincia"];
-                data[provincia] = this.props.test.mapa[i]["color"];
-                //console.log(provincia);
+                let provincia = this.props.resultados.mapa[i]["provincia"];
+                data[provincia] = this.props.resultados.mapa[i]["color"];
                 map.updateChoropleth(data, {reset: false});
             }
             //map.updateChoropleth({"Madrid": this.props.test["mapa"][1]["color"]}, {reset: false});
@@ -118,7 +130,7 @@ class ChoroplethMap extends React.Component {
 
        // console.log(this.props.resultadosAno);
         return (
-            <div id="cloropleth_map" style={{height: "150%",width: "150%"}}></div>
+            <div id="cloropleth_map" style={{height: "100%",width: "100%"}}></div>
         );
     }
 }

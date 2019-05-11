@@ -39,9 +39,6 @@ export default class Boton extends React.Component {
     render(){
         return(
             <button className="Botones" onClick={()=>{this.CreadorEscenario(this.props.buttonName)}}>{this.props.buttonName}</button>
-    //<button className="Botones" onClick={()=>{this.SelectorBoton(this.props.buttonName)}}>{this.props.buttonName}</button>
-    //<button className="Botones" onClick={()=>{this.props.onChangeAno(parseInt(this.props.buttonName, 10))}}>{this.props.buttonName}</button>
-
         );
     }
 }
