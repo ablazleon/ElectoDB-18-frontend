@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
 import { DUAL, CAMBIA_LEY, CAMBIA_ANO, CAMBIA_REGION, CAMBIA_TEST} from './actions';
-import { resultados1, resultados2 } from "../assets/mock-data"
 
 
 
@@ -17,7 +16,7 @@ function dual(state = false, action = {}) {
 function currentLey(state = 0, action = {}) {
     switch(action.type) {
         case CAMBIA_LEY:
-            return action.payload.ley;
+            return action.payload;
         default:
             return state;
     }

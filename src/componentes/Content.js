@@ -14,12 +14,13 @@ export default class Content extends React.Component {
         <Hemiciclo resultados={this.props.resultados}/>
         <Barras resultados={this.props.resultados}/>
         </div>
-        <div className={"Maps"}>
+        <div className="Maps">
             <ChoroplethMap  resultados={this.props.resultados}
+                            currentAno={this.props.currentAno}
+                            currentLey={this.props.currentLey}
+                            currentRegion={this.props.currentRegion}
                             onChangeRegion={this.props.onChangeRegion}
                             onChangeAno={this.props.onChangeAno}
-                            anoActual={this.props.anoActual}
-                            leyActual={this.props.leyActual}
                             onChangeTest = {this.props.onChangeTest}
             />
         </div>

@@ -30,9 +30,11 @@ class ChoroplethMap extends React.Component {
     }
 
     cambiarRegionVotos(region){
-        let ano = this.props.anoActual;
-        let ley = this.props.leyActual;
+        let ano = this.props.currentAno;
+        let ley = this.props.currentLey;
+        console.log(ano);
         console.log(ley);
+        console.log(this.props.currentRegion);
         let datosAntiguo = this.props.resultados;
         let url = 'http://localhost:8080/ISST-19-rest/rest/resultados?anno='+ano+'&provincia='+region+'&leyEscano='+ley;
         fetch(url)
@@ -42,9 +44,7 @@ class ChoroplethMap extends React.Component {
         .then(json => {
             let votosNuevos = json.votos;
             datosAntiguo.votos = votosNuevos;
-            console.log(JSON.stringify(datosAntiguo));
-            this.props.onChangeAno(2015);
-            this.props.onChangeAno(2016);
+            this.props.onChangeRegion(region);
             return(this.props.onChangeTest(datosAntiguo));
 
         })

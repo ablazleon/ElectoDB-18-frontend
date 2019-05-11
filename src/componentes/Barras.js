@@ -34,7 +34,6 @@ export default class Barras extends React.Component {
 
 
 	<Chart
-
           chartType="BarChart"
           data={this.datosBarras()}
           /*data={[ ["Element", "Density", { role: "style" } ],

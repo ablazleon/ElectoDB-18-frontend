@@ -27,10 +27,7 @@ export default class Boton extends React.Component {
 
     CreadorEscenario(bN){
         let ano = parseInt(bN, 10)
-        let ley = this.props.leyActual;
-        let region = this.props.regionActual;
-        let escenarioNuevo = {"ano": ano, "region": region, "ley": ley};
-        return this.props.onChangeAno(escenarioNuevo);
+        return this.props.onChangeAno(ano);
     }
 
 
