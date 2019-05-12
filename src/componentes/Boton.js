@@ -5,37 +5,34 @@ export default class Boton extends React.Component {
     constructor(props){
         super(props);
         //this.SelectorBoton = this.SelectorBoton.bind(this);
-        this.CreadorEscenario = this.CreadorEscenario.bind(this);
+        this.CambiarAno = this.CambiarAno.bind(this);
     }
 
+    CambiarAno(ano){
+        let ley = this.props.currentLey;
+        let region = this.props.currentRegion;
+        let datosAntiguo = this.props.resultados;
+        console.log("El botón que envio es: ")
+        console.log(ano);
+        let url = 'http://localhost:8080/ISST-19-rest/rest/resultados?anno='+ano+'&provincia='+region+'&leyEscano='+ley;
+        fetch(url)
+        .then(res => {
+            return res.json();
+        })
+        .then(json => {
+            this.props.onChangeAno(ano);
+            return(this.props.onChangeTest(json));
 
-    //borrar esta funcion cuando la de creadorEscenario funcione
-/*    SelectorBoton(bN) {
-        switch(bN){
-            case "2019":
-                return this.props.onChangeAno(0);
-            case "2016":
-               return this.props.onChangeAno(1);
-            case "2015":
-               return this.props.onChangeAno(2);
-            case "2011":
-               return this.props.onChangeAno(3);
-            default:
-              return this.props.onChangeAno(4);
-        }
-    }*/
-
-    CreadorEscenario(bN){
-        let ano = parseInt(bN, 10)
-        return this.props.onChangeAno(ano);
+        })
+        .catch(error =>{
+            console.log(error);
+        });
     }
-
-
 
 
     render(){
         return(
-            <button className="Botones" onClick={()=>{this.CreadorEscenario(this.props.buttonName)}}>{this.props.buttonName}</button>
+            <button className="Botones" onClick={()=>{this.CambiarAno(parseInt(this.props.buttonName, 10))}}>{this.props.buttonName}</button>
         );
     }
 }
