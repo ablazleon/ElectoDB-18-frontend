@@ -1,7 +1,7 @@
 import React from 'react';
 import Boton from './Boton.js'
 import Selector from './Selector.js'
-import SelectorNacional from './SelectorNacional.js'
+import BotonNacional from './BotonNacional.js'
 
 export default class ActionBar extends React.Component {
     render(){
@@ -9,11 +9,12 @@ export default class ActionBar extends React.Component {
         return(
 
             <div className="ActionBar">
-
-            <SelectorNacional resultados={this.props.resultados}
-                      currentAno={this.props.currentAno}
-                      currentLey={this.props.currentLey}
-            />
+            <BotonNacional 
+                onChangeRegion = {this.props.onChangeRegion}
+                onChangeTest = {this.props.onChangeTest}
+                currentRegion={this.props.currentRegion}
+                currentAno={this.props.currentAno}
+                currentLey={this.props.currentLey}/>
             <Boton buttonName="2011" 
                 onChangeAno={this.props.onChangeAno}
                 onChangeTest = {this.props.onChangeTest}

@@ -12,6 +12,7 @@ export default class Game extends React.Component {
             <ActionBar onChangeAno={this.props.onChangeAno}
                        onChangeLey={this.props.onChangeLey}
                        onChangeTest = {this.props.onChangeTest}
+                       onChangeRegion = {this.props.onChangeRegion}
                        currentRegion={this.props.currentRegion}
                        currentAno={this.props.currentAno}
                        currentLey={this.props.currentLey}/>
