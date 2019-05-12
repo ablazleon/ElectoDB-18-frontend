@@ -32,9 +32,6 @@ class ChoroplethMap extends React.Component {
     cambiarRegionVotos(region){
         let ano = this.props.currentAno;
         let ley = this.props.currentLey;
-        console.log(ano);
-        console.log(ley);
-        console.log(this.props.currentRegion);
         let datosAntiguo = this.props.resultados;
         let url = 'http://localhost:8080/ISST-19-rest/rest/resultados?anno='+ano+'&provincia='+region+'&leyEscano='+ley;
         fetch(url)

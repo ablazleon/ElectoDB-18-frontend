@@ -13,18 +13,14 @@ export default class Selector extends React.Component {
     let ano = this.props.currentAno;
     let region = this.props.currentRegion;
     let datosAntiguo = this.props.resultados;
-    console.log("la ley que envio es: ")
-    console.log(ley);
-    let url = 'http://localhost:8080/ISST-19-rest/rest/resultados?anno='+ano+'&provincia='+region+'&leyEscano='+ley;
+    let url = 'http://localhost:8080/ISST-19-rest/rest/resultados?anno='+ano+'&provincia='+region+'&leyEscanos='+ley;
     fetch(url)
     .then(res => {
         return res.json();
-
     })
     .then(json => {
         this.props.onChangeLey(ley);
         return(this.props.onChangeTest(json));
-
     })
     .catch(error =>{
         console.log(error);

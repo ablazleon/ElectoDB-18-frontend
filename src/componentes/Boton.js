@@ -11,10 +11,7 @@ export default class Boton extends React.Component {
     CambiarAno(ano){
         let ley = this.props.currentLey;
         let region = this.props.currentRegion;
-        let datosAntiguo = this.props.resultados;
-        console.log("El botón que envio es: ")
-        console.log(ano);
-        let url = 'http://localhost:8080/ISST-19-rest/rest/resultados?anno='+ano+'&provincia='+region+'&leyEscano='+ley;
+        let url = 'http://localhost:8080/ISST-19-rest/rest/resultados?anno='+ano+'&provincia='+region+'&leyEscanos='+ley;
         fetch(url)
         .then(res => {
             return res.json();

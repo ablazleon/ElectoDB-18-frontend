@@ -46,9 +46,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "Álava"
+            "name": "Alava"
           },
-          "id": "Álava",
+          "id": "Alava",
           "arcs": [
             [
               6,
@@ -98,9 +98,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "Almería"
+            "name": "Almeria"
           },
-          "id": "Almería",
+          "id": "Almeria",
           "arcs": [
             [
               22,
@@ -112,9 +112,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "Asturias"
+            "name": "Oviedo"
           },
-          "id": "Asturias",
+          "id": "Oviedo",
           "arcs": [
             [
               25,
@@ -127,9 +127,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "Ávila"
+            "name": "Avila"
           },
-          "id": "Ávila",
+          "id": "Avila",
           "arcs": [
             [
               29,
@@ -214,9 +214,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "Bizkaia"
+            "name": "Vizcaya"
           },
-          "id": "Bizkaia",
+          "id": "Vizcaya",
           "arcs": [
             [
               -108,
@@ -262,9 +262,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "Cáceres"
+            "name": "Caceres"
           },
-          "id": "Cáceres",
+          "id": "Caceres",
           "arcs": [
             [
               -35,
@@ -278,9 +278,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "Cádiz"
+            "name": "Cadiz"
           },
-          "id": "Cádiz",
+          "id": "Cadiz",
           "arcs": [
             [
               65,
@@ -292,9 +292,9 @@
         {
           "type": "MultiPolygon",
           "properties": {
-            "name": "Cantabria"
+            "name": "Santander"
           },
-          "id": "Cantabria",
+          "id": "Santander",
           "arcs": [
             [
               [
@@ -316,9 +316,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "Castellón"
+            "name": "Castellon"
           },
-          "id": "Castellón",
+          "id": "Castellon",
           "arcs": [
             [
               73,
@@ -368,9 +368,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "Córdoba"
+            "name": "Cordoba"
           },
-          "id": "Córdoba",
+          "id": "Cordoba",
           "arcs": [
             [
               83,
@@ -405,9 +405,9 @@
         {
           "type": "MultiPolygon",
           "properties": {
-            "name": "Gerona"
+            "name": "Girona"
           },
-          "id": "Gerona",
+          "id": "Girona",
           "arcs": [
             [
               [
@@ -461,9 +461,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "Gipuzkoa"
+            "name": "Guipuzcoa"
           },
-          "id": "Gipuzkoa",
+          "id": "Guipuzcoa",
           "arcs": [
             [
               106,
@@ -505,9 +505,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "Jaén"
+            "name": "Jaen"
           },
-          "id": "Jaén",
+          "id": "Jaen",
           "arcs": [
             [
               -101,
@@ -520,9 +520,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "LaCoruña"
+            "name": "ACoruna"
           },
-          "id": "LaCoruña",
+          "id": "ACoruna",
           "arcs": [
             [
               115,
@@ -534,9 +534,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "LaRioja"
+            "name": "Logrono"
           },
-          "id": "LaRioja",
+          "id": "Logrono",
           "arcs": [
             [
               118,
@@ -579,9 +579,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "León"
+            "name": "Leon"
           },
-          "id": "León",
+          "id": "Leon",
           "arcs": [
             [
               -72,
@@ -602,9 +602,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "Lérida"
+            "name": "Lerida"
           },
-          "id": "Lérida",
+          "id": "Lerida",
           "arcs": [
             [
               -96,
@@ -660,9 +660,9 @@
         {
           "type": "Polygon",
           "properties": {
-            "name": "Málaga"
+            "name": "Malaga"
           },
-          "id": "Málaga",
+          "id": "Malaga",
           "arcs": [
             [
               -100,

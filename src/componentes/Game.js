@@ -11,7 +11,8 @@ export default class Game extends React.Component {
             <h1>ElectoDB</h1>
             <ActionBar onChangeAno={this.props.onChangeAno}
                        onChangeLey={this.props.onChangeLey}
-                       regionActual={this.props.regionActual}
+                       onChangeTest = {this.props.onChangeTest}
+                       currentRegion={this.props.currentRegion}
                        currentAno={this.props.currentAno}
                        currentLey={this.props.currentLey}/>
             <Content    resultados={this.props.resultados}
