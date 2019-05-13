@@ -39,7 +39,7 @@ export default class Selector extends React.Component {
   render(){
 
     return(
-      <select class="custom-select" onChange= {(e) => this.CambiarLey(parseInt(e.target.value, 10))}>
+      <select class="Selector" onChange= {(e) => this.CambiarLey(parseInt(e.target.value, 10))}>
         <option value="0">Ley D'Hondt</option>
         <option value="1">Ley Sainte-Laguë</option>
         <option value="2">Ley Proporcional Puro</option>

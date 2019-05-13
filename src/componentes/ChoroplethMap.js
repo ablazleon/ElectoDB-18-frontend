@@ -91,7 +91,7 @@ class ChoroplethMap extends React.Component {
                 setProjection: function (element) {
                     let projection = d3.geoMercator()
                         .center([3.70325, 40.4167]) // always in [East Latitude, North Longitude]
-                        .scale(1000)
+                        .scale(3000)
                         .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
 
                     let path = d3.geoPath().projection(projection);
@@ -127,7 +127,7 @@ class ChoroplethMap extends React.Component {
 
        // console.log(this.props.resultadosAno);
         return (
-            <div id="cloropleth_map" style={{height: "100%",width: "100%"}}></div>
+            <div id="cloropleth_map" ></div>
         );
     }
 }

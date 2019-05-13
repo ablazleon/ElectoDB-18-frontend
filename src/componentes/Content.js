@@ -9,21 +9,21 @@ export default class Content extends React.Component {
     render(){
 
     return(
-        <div>
-        <div className="Content">
-        <Hemiciclo resultados={this.props.resultados}/>
-        <Barras resultados={this.props.resultados}/>
-        </div>
-        <div className="Maps">
-            <ChoroplethMap  resultados={this.props.resultados}
-                            currentAno={this.props.currentAno}
-                            currentLey={this.props.currentLey}
-                            currentRegion={this.props.currentRegion}
-                            onChangeRegion={this.props.onChangeRegion}
-                            onChangeAno={this.props.onChangeAno}
-                            onChangeTest = {this.props.onChangeTest}
-            />
-        </div>
+        <div class="Content">
+            <div className="ContentSubGraficas">
+                <span class="cropHemi"><Hemiciclo resultados={this.props.resultados}/></span>
+                <span class="cropHemi"><Barras resultados={this.props.resultados}/></span>
+            </div>
+            <div className="crop">
+                <ChoroplethMap  resultados={this.props.resultados}
+                                currentAno={this.props.currentAno}
+                                currentLey={this.props.currentLey}
+                                currentRegion={this.props.currentRegion}
+                                onChangeRegion={this.props.onChangeRegion}
+                                onChangeAno={this.props.onChangeAno}
+                                onChangeTest = {this.props.onChangeTest}
+                />
+            </div>
         </div>
         );
     }

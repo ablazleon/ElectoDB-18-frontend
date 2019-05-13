@@ -30,7 +30,7 @@ export default class BotonNacional extends React.Component {
 
     render(){
         return(
-            <button onClick={()=>{this.volverNacional()}}>Datos Nacionales</button>
+            <button class="buttonnacional" onClick={()=>{this.volverNacional()}}>Datos Nacionales</button>
         );
     }
 }

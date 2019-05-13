@@ -50,7 +50,7 @@ export default class Hemiciclo extends React.Component {
           options={this.datosHemiclico().options}
           graph_id="PieChart"
           width={"100%"}
-          height={"600px"}
+          height={"700px"}
           legend_toggle
           />
         );

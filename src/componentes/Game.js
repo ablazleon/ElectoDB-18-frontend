@@ -8,15 +8,16 @@ export default class Game extends React.Component {
     render(){
         return(
             <div>
-            <h1>ElectoDB</h1>
-            <ActionBar onChangeAno={this.props.onChangeAno}
+            <h1 class="Entrada">ElectoDB</h1>
+            <ActionBar class="ActionBar"
+                       onChangeAno={this.props.onChangeAno}
                        onChangeLey={this.props.onChangeLey}
                        onChangeTest = {this.props.onChangeTest}
                        onChangeRegion = {this.props.onChangeRegion}
                        currentRegion={this.props.currentRegion}
                        currentAno={this.props.currentAno}
                        currentLey={this.props.currentLey}/>
-            <Content    resultados={this.props.resultados}
+            <Content  resultados={this.props.resultados}
                         currentRegion={this.props.currentRegion}
                         currentAno={this.props.currentAno}
                         currentLey={this.props.currentLey}

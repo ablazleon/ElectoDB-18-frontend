@@ -9,12 +9,14 @@ export default class ActionBar extends React.Component {
         return(
 
             <div className="ActionBar">
-            <BotonNacional 
+            
+            <BotonNacional class="buttonnacional"
                 onChangeRegion = {this.props.onChangeRegion}
                 onChangeTest = {this.props.onChangeTest}
                 currentRegion={this.props.currentRegion}
                 currentAno={this.props.currentAno}
                 currentLey={this.props.currentLey}/>
+            <h2>{this.props.currentRegion}</h2>
             <Boton buttonName="2011" 
                 onChangeAno={this.props.onChangeAno}
                 onChangeTest = {this.props.onChangeTest}
@@ -33,7 +35,7 @@ export default class ActionBar extends React.Component {
                 currentRegion={this.props.currentRegion}
                 currentAno={this.props.currentAno}
                 currentLey={this.props.currentLey}/>
-            <Selector 
+            <Selector class="Selector"
                 onChangeLey={this.props.onChangeLey}
                 onChangeTest = {this.props.onChangeTest}
                 currentRegion={this.props.currentRegion}
